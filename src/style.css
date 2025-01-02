@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main-container{
+ /* background: url('https://c4.wallpaperflare.com/wallpaper/82/422/494/cyberpunk-cyberpunk-2077-wallpaper-preview.jpg ');
+  background-size: contain;
+  background-repeat: no-repeat; */
+background-color: black;
+ 
+}
+
+
+.links a{
+  font-family: 'Orbitron', sans-serif;
+   cursor: pointer;
+}
+.links a:hover{
+  color: #0066ff;
+  
+}
+
+
