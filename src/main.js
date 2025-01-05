@@ -74,7 +74,7 @@ const loader = new GLTFLoader();
 let model;
 
 loader.load(
-  './public/DamagedHelmet.gltf',
+  '/DamagedHelmet.gltf', // Remove 'public' from path since it's in the public directory
   (gltf) => {
     model = gltf.scene;
     // Enhance material properties
