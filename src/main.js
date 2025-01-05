@@ -74,7 +74,7 @@ const loader = new GLTFLoader();
 let model;
 
 loader.load(
-  './DamagedHelmet.gltf', // Use relative path starting with ./
+  './public/DamagedHelmet.gltf', // Use relative path starting with ./
   (gltf) => {
     model = gltf.scene;
     // Enhance material properties
