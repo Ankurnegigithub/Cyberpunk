@@ -74,7 +74,7 @@ const loader = new GLTFLoader();
 let model;
 
 loader.load(
-  '/DamagedHelmet.gltf', // Remove 'public' from path since it's in the public directory
+  './DamagedHelmet.gltf', // Use relative path starting with ./
   (gltf) => {
     model = gltf.scene;
     // Enhance material properties
@@ -93,6 +93,15 @@ loader.load(
   },
   (error) => {
     console.error('An error happened:', error);
+    // Add fallback cube if model fails to load
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    const material = new THREE.MeshStandardMaterial({ 
+      color: 0x0066ff,
+      metalness: 0.8,
+      roughness: 0.2
+    });
+    model = new THREE.Mesh(geometry, material);
+    scene.add(model);
   }
 );
 
